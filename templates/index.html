@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Platheum - Home</title>
+    <link rel="stylesheet" href="{% static 'style.css'  %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  
+    <header>
+
+        <h1>Welcome to platheum</h1>
+        <p>Buy sell, invest, store platheum coins</p>
+
+        <div class="second">
+            <h1>Here to pay.</h1>
+            <p>
+                Platheum is the one way to pay, invest and store money on the internet
+                
+                It help you store you money while it increases in value instead of traditional bank where inflation eat your old time saving
+               
+            it's also an an easier, safer, more secure, and private payment method — whether you’re in a store, online, or sending cash to friends or family. It’s money, made modern.
+            </p>
+        </div>
+
+
+
+    <section>
+        <form action="/suscribe/" required method="post">
+            <h6>Suscribe to know when we released</h6>
+            {% csrf_token %}
+            <input type="email" name="email" placeholder="Enter your emal" required>
+            <button>Suscribe</button>
+        </form>
+
+        <div class="social">
+            <a href="http://instagram.com/platheum">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="http://facebook.com/faceboo">
+                <i class="fa-brands fa-facebook"></i>
+
+            </a>
+            <a href="http://twitter.com/platheumnetwork">
+
+                <i class="fa-brands fa-twitter"></i>
+            </a>
+        </div>
+    </section>
+    </header>
+
+
+
+</body>
+</html>
