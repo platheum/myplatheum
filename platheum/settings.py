@@ -92,6 +92,7 @@ DATABASES = {
     }
 }
 
+
 MIDDLEWARE = [
     # ...
     "django.middleware.security.SecurityMiddleware",
