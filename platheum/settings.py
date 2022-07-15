@@ -7,13 +7,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 environ.Env.read_env()
 
 ALLOWED_HOSTS = [
- 'localhost',
- '127.0.0.1',
-  '*',
-  'pltc.herokuapp.com/',
-  '0.0.0.0'
+    'localhost',
+    '127.0.0.1',
+    '*',
+    'pltc.herokuapp.com/',
+    '0.0.0.0'
 ]
-
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -35,6 +34,8 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    "django.middleware.security.SecurityMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -85,14 +86,6 @@ DATABASES = {
         'POST': env('DB_PORT')
     }
 }
-
-
-MIDDLEWARE = [
-    # ...
-    "django.middleware.security.SecurityMiddleware",
-    "whitenoise.middleware.WhiteNoiseMiddleware",
-    # ...
-]
 
 
 # Password validation
