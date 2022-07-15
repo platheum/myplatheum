@@ -10,8 +10,10 @@ ALLOWED_HOSTS = [
  'localhost',
  '127.0.0.1',
   '*',
-  'pltc.herokuapp.com/'
+  'pltc.herokuapp.com/',
+  '0.0.0.0'
 ]
+
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
